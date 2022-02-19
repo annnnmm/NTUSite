@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0, shrink-to-fit=no">
+    <meta name="KeyWords" content="ARVR AR VR MR XR AI Medical Device">
+    <meta name="KeyWords" content="虛擬 擴增 實境 人工 智慧 智能 醫療器材 ">
+    <meta name="Description" content="互動技術平台產業新興應用聯盟">
+    <title>互動技術平台產業新興應用聯盟</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<script src="js/three.js"></script>
+<!----------------選單-------------->
+
+<!-- .navbar-expand-{sm|md|lg|xl}決定在哪個斷點以上就出現漢堡式選單 -->
+<!-- navbar-dark 文字顏色 .bg-dark 背景顏色 -->
+<nav class="container navbar navbar-expand-xl navbar-light  navbar-custom">
+
+    <!-- .navbar-brand 左上LOGO位置 -->
+
+    <!-- .navbar-toggle 漢堡式選單按鈕 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- .navbar-toggle-icon 漢堡式選單Icon -->
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="index.html">
+
+        <img src="img/logo/APRILab_Logo_CH.png" width="auto" height="100"
+             class="d-inline-block align-bottom align-content-center" alt="MDIC">
+        <div class=" titles">
+            <h2 class="h2 ">互動技術平台產業新興應用聯盟</h2>
+            <h3 class="h3">科技部產學小聯盟計畫</h3>
+        </div>
+
+    </a>
+
+    <!-- .collapse.navbar-collapse 用於外層中斷點群組和隱藏導覽列內容 -->
+    <!-- 選單項目&漢堡式折疊選單 -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- active表示當前頁面 -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#首頁">-首頁-<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#緣起">緣起</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#願景">願景</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#專家">組織</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#會員">產業會員</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#產品">產品</a>
+                <!-- .dropdown Navbar選項使用下拉式選單 -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">服務</a>
+                <!-- .dropdown-menu 下拉選單內容 -->
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#觸覺回饋人機介面">力回饋人機介面</a>
+                    <a class="dropdown-item" href="#擴增實境與虛擬環境">擴增實境與虛擬環境</a>
+                    <a class="dropdown-item" href="#虛實整合人機介面">虛實整合人機介面</a>
+                    <a class="dropdown-item" href="#數位孿生">數位孿生</a>
+                    <a class="dropdown-item" href="#教育訓練系統">教育訓練系統</a>
+                    <a class="dropdown-item" href="#培訓課程">培訓課程</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">活動</a>
+                <!-- .dropdown-menu 下拉選單內容 -->
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <!--
+                     <a class="dropdown-item" href="#活動">課程</a>
+                    <a class="dropdown-item" href="#活動">創新鐵人賽</a>
+                    -->
+                </div>
+            </li>
+            <!--
+            <li class="nav-item">
+                <a class="nav-link" href="#社群">社群</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#QA">Q&A</a>
+            </li>
+            -->
+        </ul>
+
+    </div>
+</nav>
+<!----------------選單---end----------->
+
+
+<!----------------緣起 願景-------------->
+
+<div class="card">
+    <div class="card-header" id="緣起">
+        <div class="about">
+            <h4 class="bt">聯盟緣起</h4>
+            <p class="details">
+                本聯盟由國立臺灣大學機械工程學系暨研究所成立。
+                <br>
+                <br>
+                聯盟目標在於協助國內產業公司、醫療院所與政府機構等單位，透過人機互動介面解決其面臨的問題。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="願景">
+        <div class="goals">
+            <h4 class="bt2">願景目標</h4>
+            <p class="details2">
+                在Covid-19肆虐的今日，為了減少病毒傳播的速度，人與人的互動受到限制。<br>
+                因此，創新之人機介面也就因應而生，並顯得十分重要。這也是本聯盟成立的目的。
+            </p>
+        </div>
+    </div>
+</div>
+<!----------------緣起 願景-end------------->
+
+<!--------------專家成員/組織----------------->
+
+<div class="card">
+    <div class="card-header" id="專家">
+        <div class="people">
+            <h4 class="bt">組織</h4>
+            <div class="flex1">
+                <h1 class="name1">陳湘鳳</h1>
+                <h1 class="name1a"> - 計畫主持人</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">現職：</h2>
+                <p class="peopledetails">
+                    國立臺灣大學機械工程學系教授<br>
+                    先進產品實現與互動實驗室
+                </p>
+                <h2 class="detailstitle">專長：</h2>
+                <p class="peopledetails">
+                    力回饋技術、 人機互動、
+                    產品裝配/ 拆卸規劃、  虛擬實境、 擴增實境、 以使用者為中心的設計、 感性工程、 綠色設計
+                </p>
+            </div>
+            <div class="flex1">
+                <h1 class="name1">郭璇</h1>
+                <h1 class="name1a"> - 計畫助理</h1>
+            </div>
+            <div class="flex1">
+                <h1 class="name1">葉丁魁</h1>
+                <h1 class="name1a"> - 計畫助理</h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--------------專家成員-----end------------>
+
+<!--------------會員----------------->
+<div class="card">
+    <div class="card-header" id="會員">
+        <div class="goals">
+            <h4 class="bt">產業會員介紹</h4>
+            <p class="details">
+                互動技術平台產業新興應用聯盟<br>
+                歡迎您的加入<br>
+                本聯盟以招收產業會員為主，凡加入本聯盟的產業會員，在相關的培訓課程與產品製作將享有優惠。
+            </p>
+            <div class="ref1">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaZjmg0AbunQn87bLxMlonVBM6PzRv7nE_WWgj9HBUwMoxVQ/viewform?usp=sf_link"
+                   target="_blank" class="btn btn-primary">加入會員</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--------------會員-----end------------>
+
+<!--------------產業----------------->
+<!--
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="產業">
+            <h5 class="mb-0">
+                <button class="btn" data-toggle="collapse" data-target="#collapseI" aria-expanded="true"
+                        aria-controls="collapseI">
+                    <h4 class="bt">產業動態</h4>
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseI" class="collapse hide" aria-labelledby="headingI" data-parent="#accordion">
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img src="img/news/01.jpg" width="80" height="80" class="mr-3" alt="...">
+                        <div class="media-body" style="padding:0px 30px">
+                            <a class="mt-0 mb-1" href="https://mymkc.com/article/content/22482" target="_blank">宇萌數位科技執行長白璧珍》建構AR／VR生態鏈
+                                擴大產業讓人才湧入</a>
+                            現代科技突飛猛進，現實生活中提供人們的各項需求，已從實體延伸到虛擬實境(AR)，近年更進一步到擴增實境(VR)。儘管台灣的技術發展不容小覷，但相關產業面對這股快速竄起的新趨勢，
+                            要想培育人才、創造人才，除了要求其本身具備基礎實力，透過在職訓練強化人員專才、建立AR/VR生態鏈，並放眼國際，將更能事半功倍。
+                        </div>
+                    </li>
+                    <li class="media my-4">
+                        <img src="img/news/02.jpg" width="80" height="80" class="mr-3" alt="...">
+                        <div class="media-body" style="padding:0px 30px">
+                            <a class="mt-0 mb-1"
+                               href="https://edbkcg.kcg.gov.tw/News_Content.aspx?n=FA86438944BB37E5&sms=4773608F226124D4&s=89FE2430486A94D1"
+                               target="_blank">高雄體感產業海外拓銷有成 引進千萬訂單</a>
+                            台灣最大AR/VR產業協會-社團法人台灣虛擬 及擴增實境產業TAVAR 2日代表市府引領高雄優秀體感廠商遠赴馬來西亞進行商業拓銷
+
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img src="img/news/03.jpg" width="80" height="80" class="mr-3" alt="...">
+                        <div class="media-body" style="padding:0px 30px">
+                            <a class="mt-0 mb-1" href="http://hnentrust8888.pixnet.net/blog/post/151128873"
+                               target="_blank">真的假的了！白日夢實現神器 - ＡＲＶＲ @ 陪伴您投資的好夥伴</a>
+                            隨著技術越來越融合於我們的生活中，可以預期接下來將會看到越來越多的虛擬實境/擴增實境(VR/AR)應用。VR/AR的應用十分廣泛：從更加身歷其境的新款視訊遊戲到訓練戰鬥機飛行員，以及介於二者之間的種種
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+<!--------------產業---end-------------->
+
+<!--------------產品新訊----------------->
+
+
+<!--------------產品新訊-----end------------>
+<!--------------服務----------------->
+<div class="card">
+    <div class="card-header" id="服務">
+        <div class="people">
+            <h4 class="bt">服務項目</h4>
+            <div class="flex2">
+                <h1 class="name2" id="觸覺回饋人機介面">觸覺回饋人機介面</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">製作具有觸覺回饋人機介面之AR或VR產品</h2>
+                <p class="peopledetails">
+                    客製化觸覺回饋裝置，讓使用者在使用AR或VR產品時，可猶如親歷實境的觸摸到產品，感受到與虛擬物體互動時的觸感。
+                </p>
+            </div>
+            <div class="flex2">
+                <h1 class="name2" id="擴增實境與虛擬環境">擴增實境與虛擬環境</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">製作擴增實境(AR)或虛擬實境(VR)圖形使用者人機介面</h2>
+                <p class="peopledetails">
+                    可使用手機、平板、或AR/VR眼鏡，藉由AR/VR圖形使用者人機介面操控機電產品。
+                </p>
+            </div>
+
+            <div class="flex2">
+                <h1 class="name2" id="虛實整合人機介面">虛實整合人機介面</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">製作擴增實境(AR)或虛擬實境(VR)圖形使用者人機介面</h2>
+                <p class="peopledetails">
+                    可使用手機、平板、或AR眼鏡，在AR的環境中，真實物體與虛擬物體可進行互動。
+                </p>
+            </div>
+            <div class="flex1">
+                <h1 class="name2" id="數位孿生">數位孿生</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">製作孿生(digital twin)</h2>
+                <p class="peopledetails">
+                    使實體產品的VR複製與實體產品的運作同步。藉由監控VR複製，可遠端監控實體產品的運作。
+                </p>
+            </div>
+            <div class="flex2">
+                <h1 class="name2" id="教育訓練系統">教育訓練系統</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">製作AR或VR教育訓練系統</h2>
+                <p class="peopledetails">
+                    可使用手機、平板、或AR/VR眼鏡，進行教育訓練。
+                </p>
+            </div>
+
+            <div class="flex2">
+                <h1 class="name2" id="培訓課程">培訓課程</h1>
+            </div>
+            <div class="peopleblocks">
+                <h2 class="detailstitle">辦理人機介面相關的培訓課程</h2>
+                <p class="peopledetails">
+                    本聯盟將辦理人機介面相關的培訓課程，目的是使對人機介面有興趣者具備人機介面製作的能力，使相關技術能擴散出去。
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--------------服務-end---------------->
+
+<!--------------活動----------------->
+<!--
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingImg">
+            <h5 class="mb-0">
+                <button class="btn" data-toggle="collapse" data-target="#collapseLmg" aria-expanded="true"
+                        aria-controls="collapseLmg">
+                    <h4 class="bt">活動-參訪-樂美館</h4>
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseLmg" class="collapse show" aria-labelledby="headingLmg" data-parent="#accordion">
+            <div class="card-body">
+                <div class="活動-企業參訪-樂美館" style="padding:0px 30px">
+                    樂美館股份有限公司參訪<br/>
+                    樂美館股份有限公司參訪心得：<br/>
+                    XAC的AR與VR在遊戲與各種應用上皆相當成熟。透過該公司的介紹，其製作過的產品相當多，
+                    讓我印象深刻的是製作鬼屋系列的產品，該公司在產品客製化方面的確是這個領域的佼佼者 !!<br/>
+
+                    <img src="img/活動-參訪/樂美館/28136.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+                    <img src="img/活動-參訪/樂美館/28137.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+                    <img src="img/活動-參訪/樂美館/28138.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingImg">
+            <h5 class="mb-0">
+                <button class="btn" data-toggle="collapse" data-target="#collapseHtc" aria-expanded="true"
+                        aria-controls="collapseHtc">
+                    <h4 class="bt">活動-參訪-宏達電</h4>
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseHtc" class="collapse show" aria-labelledby="headingHtc" data-parent="#accordion">
+            <div class="card-body">
+                <div class="活動-企業參訪-宏達電" style="padding:0px 30px">
+                    宏達國際電子股份有限公司參訪<br/>
+                    宏達國際電子股份有限公司參訪心得：<br/>
+                    HTC果然是名不虛傳，VR設計相當成熟，只要戴上VR眼鏡，人彷彿進入到另一個世界，可以在這個虛擬空間裡自由翱翔，這真是一個特別又好玩的體驗!!<br/>
+
+                    <img src="img/活動-參訪/宏達電/28141.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+                    <img src="img/活動-參訪/宏達電/28142.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+                    <img src="img/活動-參訪/宏達電/28143.jpg" width="450" height="300" class="img-fluid img-thumbnail"
+                         alt="Responsive image">
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<!--------------活動----end------------->
+
+
+<!--------------社群----------------->
+
+<!--------------社群-----end------------>
+
+<!--------------QA----------------->
+
+<!--------------QA--end--------------->
+
+<!--------------3d----------------->
+
+
+<!--------------3d-end---------------->
+<!--footer-->
+
+<div class="footer1" >
+    <div class="logoicon">
+        <a href="https://aprilabntu.wixsite.com/website"><img src="img/logo/APRILab_Logo_CH.png" alt="APRI"
+                                                              width="130px" ></a>
+    </div>
+    <div class="logoicon">
+        <a href="https://web.ncku.edu.tw/"><img src="img/logo/NTUlogo.png" alt="NTU"
+                                                width="130px"></a><br/>
+    </div>
+
+
+    <div class="footerdetails1">
+        <h1 class="footertitle">台大機械系先進產品實現與互動實驗室</h1>
+        <p class="footerp">互動技術平台產業新興應用聯盟<br>
+            聯絡電話：02-3366-2692
+            <br>服務時間:週一~ 週五 09:00~17:00
+            <br/>
+            地址：台北市大安區羅斯福路四段1號 (新數學館 205-3 / 工學院綜合大樓636)</p>
+    </div>
+    <div class="footerdetails2">
+        <h1 class="footertitle">聯絡我們</h1>
+        <p class="footerp">
+            陳湘鳳 - 計畫主持人<br>
+            ssmith@ntu.edu.tw<br>
+            02-3366-2692<br>
+            葉丁魁 - 計畫助理<br>
+            tommy@gs.ncku.edu.tw<br>
+            06-2353535 ext. 3408<br>
+            郭璇 - 計畫助理<br>
+            TouchableAR@gmail.com<br>
+            09-1664-6181
+        </p>
+    </div>
+
+</div>
+<p class="bottomfooter"> &copy; 2022 互動技術平台產業新興應用聯盟</p>
+
+
+
+<!-- test code -->
+
+
+<script>
+
+</script>
+
+<!-- test code end -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+
+            usmessage: "歡迎加入 互動技術平台產業新興應用聯盟",
+            msg_number: "", ername: '',
+            usernameError: false,
+            userErrMsg: '',
+            password: '',
+            passwordError: false,
+            passErrMsg: '',
+            email: '',
+            emailError: false,
+            emailErrMsg: ''
+        },
+    })
+
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

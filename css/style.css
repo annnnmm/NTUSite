@@ -1,0 +1,355 @@
+.container{
+    background:url(../img/headerwhiteback.png);
+    background-size: 100% 150px;
+    box-shadow: 0px 4px 5px -3px #888;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbar-nav{
+    background: white;
+}
+
+/* change the brand and text color */
+.navbar-custom {
+    min-width: 100%;
+    min-height: 120px;
+    margin-top: 1px;
+    margin-left:1px;
+    margin-right: 0px;
+
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+
+}
+.navbar-brand img{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+/* title*/
+.titles{
+    display: block;
+    align-content: center;
+    justify-content: right;
+    margin-left: 10px;
+}
+.titles h2{
+    color: #513A31;
+    font-size: 26px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.titles h3{
+    font-size: 13px;
+    text-align: right;
+    color: #474747;
+}
+
+
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #513A31;
+    line-height: 55px; 
+    text-align: left;
+    padding:0;  
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #5B7A6A;
+ //  line-height: 0px;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #513A31;
+ //   line-height: 0px;
+}
+
+/* for dropdown only - change the color of droodown */
+.navbar-custom .dropdown-menu {
+    background-color: #7db6cb;
+
+}
+
+.navbar-custom .dropdown-item {
+    color: #fefeff;
+
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #191919;
+    background-color: #6ca6bb;
+    line-height: 50px;
+}
+
+.btn{
+    background: transparent;
+}
+
+.bt {
+    text-align: center;
+    font-size: 20px;
+    color:#513A31 ;
+    margin-bottom: 10px;
+
+}
+.bt2 {
+    text-align: center;
+    font-size: 20px;
+    color:#513A31 ;
+    margin-bottom: 10px;
+
+}
+
+
+.g-box {
+	margin-top: 30px;
+	background-color: #eee1e1;
+
+}
+.card{
+    border: none;
+    background: transparent;
+}
+.test {
+    background-color: #4081b3;
+}
+.about{
+    background:#C6D5CF ;
+    padding: 20px;
+    margin:5px;
+    align-content: center;
+    align-items: center;
+}
+.goals{
+    background:#f2f2f2 ;
+    padding: 20px;
+    margin:5px;
+    align-content: center;
+}
+.people{
+    background:#C6D5CF ;
+    padding: 20px;
+    align-items: center;
+
+}
+.peopleblocks{
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.flex1{
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.flex2{
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.name1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+.name2{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.name1a{
+    font-size: 14px;
+    font-weight: 300;
+
+}
+.detailstitle{
+    font-weight: 350;
+    font-size: 16px;
+}
+.peopledetails{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.card-header{
+    background: transparent;
+    border: none;
+}
+.card-body{
+    background: #c6d5cf;
+    border: none;
+    margin-bottom: 0px;
+    margin:15px;
+    border-radius: 5px;
+    padding:30px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* h5 paragraph text */
+.details{
+    font-size: 18px;
+    color:#474747;
+    font-weight: 300;
+    text-align: center;
+}
+.details2{
+    font-size: 18px;
+    color:#474747;
+    font-weight: 300;
+    text-align: center;
+}
+.carousel .carousel-item {
+    width:auto;
+    margin:15px;
+  }
+  
+  .carousel .carousel-item img {
+
+    max-width: 1200px;
+
+    object-fit: cover;
+  }
+
+.btn-primary{
+   border-width: 1px;
+    border-color:#c6d5cf;
+    color: #0b2e13;
+    width: 200px;
+
+}
+.btn-primary:hover{
+    border: 1px solid gray;
+    background-color: #474747;
+    transition: 0.5s;
+}
+.ref1{
+   text-align: center;
+}
+section {
+	margin: 30px;
+}
+#myslideshow {
+
+    max-width: 500px;
+}
+
+#組織 {
+
+background-color: #eee1e1;
+
+}
+.footer1{
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+  padding-left: 40px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #f2f2f2;
+}
+.footerdetails1{
+height:200px;
+    width:30%;
+}
+.footerdetails2{
+    height:200px;
+
+}
+.footertitle{
+    font-weight: 350;
+    font-size: 16px;
+
+}
+.footerp{
+    font-size: 14px;
+    font-weight: 200;
+}
+.bottomfooter{
+    text-align: center;
+    color:#757575;
+    font-size: 12px;
+    background: #f2f2f2;
+    padding:10px;
+    border-top: 1px solid #c6d5cf;
+}
+.logoicon{
+    text-align: center;
+}
+@media (max-width: 733px) {
+    .navbar-brand{
+        align-items: center;
+        align-content: center;
+        display: inline-block;
+        justify-content: center;
+    }
+    .navbar-brand h2{
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .container img{
+        height:80px;
+        margin-left: 30px;
+    }
+    .titles h3{
+        text-align: left;
+        margin-left: 30px;
+    }
+    .footer1{
+        margin-top: 10px;
+        align-items: center;
+        align-content: center;
+        display:block;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #f2f2f2;
+        justify-content: center;
+    }
+    .footerdetails1{
+      height: auto;
+        width: 80%;
+        margin:auto;
+    }
+    .footerdetails2{
+   margin:auto;
+        width: 80%;
+
+    }
+    .logoicon{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+}
+@media(min-width:734px ){
+    .navbar-brand img{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+@media (max-width:349px ) {
+    .navbar-brand h2{
+        font-size: 14px;
+        margin-left: 30px;
+    }
+    
+}
